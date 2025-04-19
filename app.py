@@ -1021,7 +1021,7 @@ with tab5:
             data.append({
                 "Year": year,
                 "Days": year * 365,
-                "Invested (₱)": total_invested,
+                "Invested (₱)": annual_contribution,
                 "Total Investment (₱)": previous_portfolio,
                 "Ending (₱)": total_portfolio,
                 "Growth (₱)": growth_pesos,
