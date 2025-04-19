@@ -1020,7 +1020,7 @@ with tab5:
             # Append data for the current year
             data.append({
                 "Year": year,
-                "Days": year * 365,
+                "Age": year + 30,
                 "Invested (₱)": annual_contribution,
                 "Total Investment (₱)": previous_portfolio,
                 "Ending (₱)": total_portfolio,
