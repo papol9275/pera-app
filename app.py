@@ -991,8 +991,8 @@ with tab5:
         col1, col2 = st.columns(2)
         
         with col1:
-            initial_investment = st.number_input("Initial Investment (₱)", min_value=1000, value=5000, step=1000, format="%d")
-            annual_contribution = st.number_input("Annual Contribution (₱)", min_value=0, value=1000, step=100, format="%d")
+            initial_investment = st.number_input("Initial Investment (₱)", min_value=1000, value=150000, step=1000, format="%d")
+            annual_contribution = st.number_input("Annual Contribution (₱)", min_value=0, value=250000, step=100, format="%d")
         
         with col2:
             growth_rate = st.number_input("Annual Growth Rate (%)", min_value=1.0, max_value=30.0, value=6.0, step=0.5) / 100
