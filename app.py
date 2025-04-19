@@ -1028,7 +1028,7 @@ with tab5:
                 "Growth (%)": growth_percent
             })
 
-            annual_contribution *= annual_contribution * 0.025
+            annual_contribution *= 1.025
 
         # Convert the list of dictionaries to a DataFrame
         df = pd.DataFrame(data)
