@@ -995,7 +995,7 @@ with tab5:
             annual_contribution = st.number_input("Annual Contribution (₱)", min_value=0, value=1000, step=100, format="%d")
         
         with col2:
-            growth_rate = st.number_input("Annual Growth Rate (%)", min_value=1.0, max_value=30.0, value=15.0, step=0.5) / 100
+            growth_rate = st.number_input("Annual Growth Rate (%)", min_value=1.0, max_value=30.0, value=6.0, step=0.5) / 100
             years = st.number_input("Number of Years", min_value=1, max_value=100, value=30, step=1)
         
         submit_button = st.form_submit_button(label="Calculate Compound Growth", use_container_width=True)
