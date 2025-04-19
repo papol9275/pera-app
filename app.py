@@ -98,17 +98,17 @@ with tab1:
         col1, col2 = st.columns(2)
         
         with col1:
-            years = st.number_input("Simulation Period (Years)", min_value=5, max_value=50, value=30, step=1)
-            annual_investment = st.number_input("Annual Investment (₱)", min_value=0, value=500000, step=10000, format="%d")
+            years = st.number_input("Simulation Period (Years)", min_value=5, max_value=50, value=25, step=1)
+            annual_investment = st.number_input("Annual Investment (₱)", min_value=0, value=250000, step=10000, format="%d")
             
         with col2:
-            growth_rate = st.number_input("Annual Growth Rate (%)", min_value=1.0, max_value=20.0, value=4.25, step=0.25) / 100
+            growth_rate = st.number_input("Annual Growth Rate (%)", min_value=1.0, max_value=20.0, value=3.75, step=0.25) / 100
             investment_duration = st.number_input("Investment Duration (Years)", min_value=1, max_value=years, value=min(30, years), step=1)
         
         submit_button = st.form_submit_button(label="Simulate Investment", use_container_width=True)
     
     # Define the simulation function (adapted from Investing.py)
-    def simulate_investment(years, annual_investment=50000, growth_rate=0.0425, investment_duration=30):
+    def simulate_investment(years, annual_investment, growth_rate, investment_duration):
         total_portfolio = 0
         total_invested = 0
         monthly_investment = 0
@@ -231,11 +231,11 @@ with tab2:
         col1, col2 = st.columns(2)
         
         with col1:
-            unit_price = st.number_input("Unit Price (₱)", min_value=10000, value=1150000, step=50000, format="%d")
+            unit_price = st.number_input("Unit Price (₱)", min_value=10000, value=1000000, step=50000, format="%d")
             units_sold_annually = st.number_input("Units Sold Annually", min_value=1, value=8, step=1)
         
         with col2:
-            years_to_simulate = st.number_input("Years to Simulate", min_value=1, max_value=10, value=6, step=1)
+            years_to_simulate = st.number_input("Years to Simulate", min_value=1, max_value=30, value=3, step=1)
         
         submit_button = st.form_submit_button(label="Analyze Cash Flow", use_container_width=True)
     
@@ -437,13 +437,13 @@ with tab3:
         col1, col2 = st.columns(2)
         
         with col1:
-            loan_amount = st.number_input("Loan Amount (₱)", min_value=1000, value=1000000, step=10000, format="%d")
-            carryover_amount = st.number_input("Carryover Amount (₱)", min_value=0, value=50000, step=1000, format="%d")
+            loan_amount = st.number_input("Loan Amount (₱)", min_value=1000, value=100000, step=5000, format="%d")
+            carryover_amount = st.number_input("Carryover Amount (₱)", min_value=0, value=10000, step=1000, format="%d")
         
         with col2:
-            monthly_interest_rate = st.number_input("Monthly Interest Rate (%)", min_value=0.0, value=1.0, step=0.1, format="%.2f")
+            monthly_interest_rate = st.number_input("Monthly Interest Rate (%)", min_value=0.0, value=1.50, step=0.25, format="%.2f")
             carryover_duration = st.number_input("Carryover Duration (Months)", min_value=0, value=12, step=1)
-            duration_months = st.number_input("Repayment Duration (Months)", min_value=1, value=36, step=1)
+            duration_months = st.number_input("Repayment Duration (Months)", min_value=1, value=36, step=6)
             
         submit_button = st.form_submit_button(label="Calculate Repayment Schedule", use_container_width=True)
     
@@ -1121,7 +1121,7 @@ with tab6:
         col1, col2 = st.columns(2)
         
         with col1:
-            monthly_peso_investment = st.number_input("Monthly Investment (₱)", min_value=1000, value=10000, step=1000, format="%d")
+            monthly_peso_investment = st.number_input("Monthly Investment (₱)", min_value=1000, value=10000, step=2500, format="%d")
             initial_usd_value = st.number_input("Initial USD-PHP Exchange Rate", min_value=40.0, value=56.5, step=0.5, format="%.2f")
         
         with col2:
